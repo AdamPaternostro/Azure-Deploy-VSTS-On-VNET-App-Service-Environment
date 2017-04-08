@@ -1,4 +1,3 @@
-
 # Overview
 To release into an Azure Service Environment that has an Internal load balancer you need to create a VM in your VNET, install a release agent and deploy the code from there.  VSTS is used for the build and release process, just part of the release process runs on a VM that is inside a particular VNET.
 This will work for any deployment inside a VNET, this just demostrates a website.
@@ -11,7 +10,7 @@ This will work for any deployment inside a VNET, this just demostrates a website
 - Deploys the Website into the ASE by downloading the artifacts from TFS
  
 # VM
-- Created a VM in the VNET (this machine does not need to be that large or fast: A1 Standard or A2/A3 – you can always resize)
+- Created a VM in the VNET (this machine does not need to be that large orfast: A1 Standard or A2/A3 – you can always resize)
 - Enter a Windows Server VM (you can do Linux, these instructions are for Windows)
 - A market place image: Visual Studio 2015 Community Edition with Azure SDK / Update 3
 - Turned off IE Enhanced Security
@@ -38,7 +37,7 @@ Also, you need to import the self-signed SSL into MMC.  Start MMC, add the certi
 - Reboot
 
 # VSTS
-- Create a release definition
+- Create a release definition (NOTE: you might need to run the agent on the VM steps below to register) 
 - Have a Agent which uses a new Agent pool.  The agent poll is called “Julia VNET” since it will be on the VNET that the ASE is on.
 Click the Manage link to create new agent (2nd screen shot)
 ![alt tag](https://raw.githubusercontent.com/AdamPaternostro/Azure-Deploy-VSTS-On-VNET-App-Service-Environment/master/NewAgent.jpg)
