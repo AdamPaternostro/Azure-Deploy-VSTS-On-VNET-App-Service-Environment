@@ -12,7 +12,7 @@ This will work for any deployment inside a VNET, this just demostrates a website
  
 # VM
 - Created a VM in the VNET (this machine does not need to be that large or fast: A1 Standard or A2/A3 – you can always resize)
-- Either a Windows Server VM
+- Enter a Windows Server VM (you can do Linux, these instructions are for Windows)
 - A market place image: Visual Studio 2015 Community Edition with Azure SDK / Update 3
 - Turned off IE Enhanced Security
 ![alt tag](https://raw.githubusercontent.com/AdamPaternostro/Azure-Deploy-VSTS-On-VNET-App-Service-Environment/master/TurnOffIE.jpg)
@@ -25,9 +25,9 @@ This will work for any deployment inside a VNET, this just demostrates a website
 
 - Installed Azure PowerShell SDK: https://azure.microsoft.com/en-us/downloads/  (not needed if part of VM)
 - Set-Execution Policy to Unrestricted in PowerShell
-- Update the hosts file (this is not needed if you have proper DNS).  You need both the site and the “scm” site.
+- Update the hosts file (this is not needed if you have proper DNS).  You need both the site and the “scm” site.  Tjhe "scm" site is the Azure Web App management site.
 
-Put the Internal Load Balancer of the ASE in here with your domain of your ASE.
+Put the IP address Internal Load Balancer of the ASE in here with your domain of your ASE.
 
 C:\Windows\System32\drivers\etc\hosts (open Notepad in Admin mode)
 ![alt tag](https://raw.githubusercontent.com/AdamPaternostro/Azure-Deploy-VSTS-On-VNET-App-Service-Environment/master/DNSEntries.jpg)
