@@ -26,6 +26,8 @@ This will work for any deployment inside a VNET, this just demonstrates a websit
 - Set-Execution Policy to Unrestricted in PowerShell
 - Update the hosts file (this is not needed if you have proper DNS).  You need both the site and the “scm” site.  Tjhe "scm" site is the Azure Web App management site.
 
+*** If you are not using an ASE, you can skip these steps.  Some people use this article for deploying to a machine in a VNET and not necessary an ASE.
+
 Put the IP address Internal Load Balancer of the ASE in here with your domain of your ASE.
 
 C:\Windows\System32\drivers\etc\hosts (open Notepad in Admin mode)
